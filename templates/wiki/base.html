@@ -1,0 +1,18 @@
+{% extends "wiki/base_site.html" %}
+{% load static %}
+
+{% block "extra_css" %}
+<link rel="stylesheet" href="https://bootswatch.com/3/cerulean/bootstrap.min.css">
+{% endblock %}
+
+{% block wiki_site_title %}- Labcodes Wiki{% endblock %}
+
+{% block wiki_header_branding %}
+<a class="navbar-brand" href="/">Labcodes Wiki</a>
+{% endblock %}
+
+{% block wiki_header_navlinks %}
+<ul class="nav navbar-nav">
+  <li class="active"><a href="{% url 'wiki:root' %}">Wiki</a></li>
+</ul>
+{% endblock %}

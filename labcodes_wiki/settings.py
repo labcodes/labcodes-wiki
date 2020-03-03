@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
+from django.urls import reverse_lazy
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -141,8 +142,7 @@ MEDIA_URL = '/media/'
 
 WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = False
-
-from django.urls import reverse_lazy
+WIKI_ANONYMOUS_WRITE = False
 LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 
 django_heroku.settings(locals())

@@ -3,4 +3,6 @@ venv
 staticfiles
 .env
 db.sqlite3
-getting-started/*
+bin/
+lib/
+include/
